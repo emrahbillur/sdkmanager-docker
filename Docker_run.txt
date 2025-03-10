@@ -1,0 +1,1 @@
+sudo docker run     -it --rm        --net=host        --ipc=host      -v /dev/bus/usb:/dev/bus/usb/   -v /tmp/.X11-unix/:/tmp/.X11-unix  -v $(pwd)/sdkm_downloads:/home/nvidia/Downloads/nvidia/sdkm_downloads   -e DISPLAY=$DISPLAY  emrahbillur/sdkmanager-nvidia:latest 
