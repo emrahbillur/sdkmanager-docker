@@ -1,7 +1,7 @@
 # Ubuntu 20.04 LTS based NVIDIA SDK Manager container for flashing Orin Devices
-sdkmanager runs as graphical interface. 
-after running container.
+This docker container allows NVIDIA Sdkmanager run with the graphical interface without installing the required Ubuntu 22.04 version. 
 
+How It works:
 - Just run 
   `make image`
 to build the docker image
