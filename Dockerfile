@@ -115,7 +115,21 @@ RUN apt-get install -y ubuntu-desktop \
   qemu-kvm \
   libvirt-daemon-system \
   libvirt-clients \
-  bridge-utils
+  bridge-utils 
+RUN apt-get update
+RUN apt-get install -y \
+  abootimg \
+  sshpass \
+  zstd \
+  nfs-kernel-server \
+  keyutils \
+  libnfsidmap2 \
+  libtirpc-common \
+  libtirpc3 \
+  nfs-common \
+  rpcbind \
+  open-iscsi \
+  watchdog
 RUN update-binfmts --enable qemu-aarch64
 COPY patch /
 RUN /bin/bash -c 'dpkg -i /sdkmanager_*.deb || true' && rm /sdkmanager_*.deb &&\
